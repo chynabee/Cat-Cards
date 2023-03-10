@@ -3,6 +3,8 @@ package com.techelevator.controller;
 import com.techelevator.dao.CatCardDao;
 import com.techelevator.services.CatFactService;
 import com.techelevator.services.CatPicService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 public class CatController {
 
@@ -16,5 +18,9 @@ public class CatController {
         this.catPicService = catPicService;
     }
 
+    @RequestMapping(path="/hello", method = RequestMethod.GET)
+    public String hello(){
+        return "Hello World";
+    }
 
 }
